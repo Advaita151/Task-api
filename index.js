@@ -18,7 +18,7 @@ app.get("/",(req,res)=>{
 })
 
 app.use("/task",taskRoute)
-app.use("subTask",subTaskRoute)
+app.use("/subTask",subTaskRoute)
 
 mongoose.connect(mongoDB)
     .then(()=>{
