@@ -1,4 +1,4 @@
-import {SubTask} from '../models/Task.js';
+import {SubTask} from '../models/SubTask.js';
 import {Task} from '../models/Task.js';
 
 export async function createSubtask(req, res){

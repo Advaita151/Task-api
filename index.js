@@ -3,6 +3,7 @@ import mongoose from "mongoose";
 import * as dotenv from "dotenv";
 import cookieParser from "cookie-parser";
 import taskRoute from "./routes/taskRoute.js"
+import subTaskRoute from "./routes/subTaskRoute.js"
 
 dotenv.config();
 const app = express();
@@ -17,6 +18,7 @@ app.get("/",(req,res)=>{
 })
 
 app.use("/task",taskRoute)
+app.use("subTask",subTaskRoute)
 
 mongoose.connect(mongoDB)
     .then(()=>{
